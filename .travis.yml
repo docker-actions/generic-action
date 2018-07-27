@@ -5,24 +5,16 @@ before_script:
   - tag="${TRAVIS_TAG:-latest}"
   - image_name="$(echo "${TRAVIS_REPO_SLUG}" | cut -d '/' -f 2)"
   - docker_org="actions"
-script:
-  - |
-    for c in $(< commands.txt); do
-      arr_c=(${c//:/ })
-      arr_v=(${arr_c//=/ })
-      arr_p=(${arr_c[1]//;/ })
-      echo -e "#!/usr/bin/env bash\nset -Eeuo pipefail\nexec ${arr_v} \"$@\"" > entrypoint.sh
-      docker build --build-arg REQUIRED_PACKAGES="$(echo ${arr_p[@]})" -t ${docker_org}/${arr_v}:${tag} .
-    done
+script: .travis/build.sh $docker_org $tag
 before_deploy:
   - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
 deploy:
   - provider: script
-    script: bash -c "for c in $(< commands.txt); do; arr_c=(${c//:/ }); arr_v=(${arr_c//=/ }); docker push ${docker_org}/${arr_v}:${tag}; done"
+    script: .travis/deploy.sh $docker_org $tag
     on:
       branch: master
   - provider: script
-    script: bash -c "for c in $(< commands.txt); do; arr_c=(${c//:/ }); arr_v=(${arr_c//=/ }); docker push ${docker_org}/${arr_v}:${arr_v[1]}-${tag}; done"
+    script: .travis/deploy.sh $docker_org $tag
     on:
       branch: master
       tags: true
