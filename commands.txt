@@ -4,3 +4,6 @@ ssh-keygen=7.6:openssh-client
 ssh-keyscan=7.6:openssh-client
 curl=7.58:curl
 gpg=2.2.4:gpg
+gpg-connect-agent=2.2.4:gpg
+gpg-agent=2.2.4:gpg-agent
+tar=1.29:tar
