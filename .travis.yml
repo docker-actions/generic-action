@@ -9,9 +9,10 @@ script:
   - |
     for c in $(< commands.txt); do
       arr_c=(${c//:/ })  
+      arr_v=(${arr_c//=/ })  
       arr_p=(${arr_c[1]//;/ })  
-      echo -e "#!/usr/bin/env bash\nset -Eeuo pipefail\nexec ${arr_c} \"$@\"" > entrypoint.sh
-      docker build --build-arg REQUIRED_PACKAGES="$(echo ${arr_p[@]})" -t ${docker_org}/${arr_c}:${tag} .
+      echo -e "#!/usr/bin/env bash\nset -Eeuo pipefail\nexec ${arr_v} \"$@\"" > entrypoint.sh
+      docker build --build-arg REQUIRED_PACKAGES="$(echo ${arr_p[@]})" -t ${docker_org}/${arr_v}:${tag} .
     done
 before_deploy:
   - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
@@ -21,7 +22,8 @@ deploy:
       - |
         for c in $(< commands.txt); do
           arr_c=(${c//:/ })  
-          docker push ${docker_org}/${arr_c}:${tag}
+          arr_v=(${arr_c//=/ })  
+          docker push ${docker_org}/${arr_v}:${tag}
         done
     on:
       branch: master
@@ -30,7 +32,8 @@ deploy:
       - |
         for c in $(< commands.txt); do
           arr_c=(${c//:/ })  
-          docker push ${docker_org}/${arr_c}:${tag}
+          arr_v=(${arr_c//=/ })  
+          docker push ${docker_org}/${arr_v}:${arr_v[1]}-${tag}
         done
     on:
       branch: master

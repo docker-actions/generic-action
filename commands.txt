@@ -1,2 +1,2 @@
-git:git
-ssh:openssh-client
+git=2.17.1:git
+ssh=7.6:openssh-client
