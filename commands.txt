@@ -6,4 +6,4 @@ curl=7.58:curl
 gpg=2.2.4:gpg
 gpg-connect-agent=2.2.4:gpg
 gpg-agent=2.2.4:gpg-agent
-tar=1.29:tar
+tar=1.29:tar;libacl1
