@@ -7,3 +7,5 @@ gpg=2.2.4:gpg
 gpg-connect-agent=2.2.4:gpg
 gpg-agent=2.2.4:gpg-agent
 tar=1.29:tar;libacl1
+grep=3.1:grep
+sed=4.4:sed
