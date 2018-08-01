@@ -19,7 +19,6 @@ skill=3.3.12:procps;liblzma5;liblz4-1;libgcrypt20
 uptime=3.3.12:procps;liblzma5;liblz4-1;libgcrypt20
 vmstat=3.3.12:procps;liblzma5;liblz4-1;libgcrypt20
 watch=3.3.12:procps;liblzma5;liblz4-1;libgcrypt20
-top=3.3.12:procps;liblzma5;liblz4-1;libgcrypt20
 pkill=3.3.12:procps;liblzma5;liblz4-1;libgcrypt20
 snice=3.3.12:procps;liblzma5;liblz4-1;libgcrypt20
 pgrep=3.3.12:procps;liblzma5;liblz4-1;libgcrypt20
