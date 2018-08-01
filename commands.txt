@@ -23,3 +23,4 @@ top=3.3.12:procps
 pkill=3.3.12:procps
 snice=3.3.12:procps
 pgrep=3.3.12:procps
+gawk=4.1.4:gawk;libsigsegv2;libreadline7;libmpfr6
