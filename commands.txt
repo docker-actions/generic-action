@@ -24,3 +24,4 @@ snice=3.3.12:procps;liblzma5;liblz4-1;libgcrypt20
 pgrep=3.3.12:procps;liblzma5;liblz4-1;libgcrypt20
 gawk=4.1.4:gawk;libsigsegv2;libreadline7;libmpfr6
 rsync=3.1.2:rsync
+jq=1.5:jq
