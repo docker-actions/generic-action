@@ -7,7 +7,7 @@ ENV BUILD_DEBS /build/debs
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Build pre-requisites
-RUN bash -c 'mkdir -p ${BUILD_DEBS} ${ROOTFS}/{usr/bin,usr/local/bin,opt}'
+RUN bash -c 'mkdir -p ${BUILD_DEBS} ${ROOTFS}/{sbin,usr/bin,usr/local/bin,opt}'
 
 # Fix permissions
 RUN chown -Rv 100:root $BUILD_DEBS
@@ -28,10 +28,18 @@ RUN if [ "x$(ls ${BUILD_DEBS}/)" = "x" ]; then \
       done; \
     fi
 
+# Move /sbin out of the way
+RUN mv ${ROOTFS}/sbin ${ROOTFS}/sbin.orig \
+      && mkdir -p ${ROOTFS}/sbin \
+      && for b in ${ROOTFS}/sbin.orig/*; do \
+           echo 'cmd=$(basename ${BASH_SOURCE[0]}); exec /sbin.orig/$cmd "$@"' > ${ROOTFS}/sbin/$(basename $b); \
+           chmod +x ${ROOTFS}/sbin/$(basename $b); \
+         done
+
 COPY entrypoint.sh ${ROOTFS}/usr/local/bin/entrypoint.sh
 RUN chmod +x ${ROOTFS}/usr/local/bin/entrypoint.sh
 
-FROM actions/bash:4.4.18-5
+FROM actions/bash:4.4.18-6
 LABEL maintainer = "ilja+docker@bobkevic.com"
 
 ARG ROOTFS=/build/rootfs
