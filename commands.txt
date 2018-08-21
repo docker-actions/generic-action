@@ -34,3 +34,16 @@ gawk=4.1.4:gawk;libsigsegv2;libreadline7;libmpfr6
 rsync=3.1.2:rsync
 jq=1.5:jq
 tig=2.3.0:tig;ncurses-base
+psql=10.3:postgresql-client-10=10.3-1;perl-base;libc-bin
+clusterdb=10.3:postgresql-client-10=10.3-1;perl-base;libc-bin
+createdb=10.3:postgresql-client-10=10.3-1;perl-base;libc-bin
+dropdb=10.3:postgresql-client-10=10.3-1;perl-base;libc-bin
+pg_basebackup=10.3:postgresql-client-10=10.3-1;perl-base;libc-bin
+pg_dump=10.3:postgresql-client-10=10.3-1;perl-base;libc-bin
+pg_dumpall=10.3:postgresql-client-10=10.3-1;perl-base;libc-bin
+pg_isready=10.3:postgresql-client-10=10.3-1;perl-base;libc-bin
+pg_receivewal=10.3:postgresql-client-10=10.3-1;perl-base;libc-bin
+pg_recvlogical=10.3:postgresql-client-10=10.3-1;perl-base;libc-bin
+pg_restore=10.3:postgresql-client-10=10.3-1;perl-base;libc-bin
+reindexdb=10.3:postgresql-client-10=10.3-1;perl-base;libc-bin
+vacuumdb=10.3:postgresql-client-10=10.3-1;perl-base;libc-bin
