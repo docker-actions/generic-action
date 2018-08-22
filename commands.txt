@@ -1,4 +1,4 @@
-git=2.17.1:git;less
+git=2.17.1:git
 ssh=7.6:openssh-client
 ssh-keygen=7.6:openssh-client
 ssh-keyscan=7.6:openssh-client
@@ -47,3 +47,17 @@ pg_recvlogical=10.3:postgresql-client-10=10.3-1;perl-base;libc-bin
 pg_restore=10.3:postgresql-client-10=10.3-1;perl-base;libc-bin
 reindexdb=10.3:postgresql-client-10=10.3-1;perl-base;libc-bin
 vacuumdb=10.3:postgresql-client-10=10.3-1;perl-base;libc-bin
+more=2.31.1:util-linux
+flock=2.31.1:util-linux
+lscpu=2.31.1:util-linux
+lsipc=2.31.1:util-linux
+lsmem=2.31.1:util-linux
+lsns=2.31.1:util-linux
+mcookie=2.31.1:util-linux
+namei=2.31.1:util-linux
+nsenter=2.31.1:util-linux
+prlimit=2.31.1:util-linux
+rev=2.31.1:util-linux
+whereis=2.31.1:util-linux
+getty=2.31.1:util-linux
+less=487:less;ncurses-base
