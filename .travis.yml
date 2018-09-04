@@ -1,3 +1,4 @@
+language: minimal
 sudo: required
 services:
   - docker
@@ -18,3 +19,14 @@ deploy:
     on:
       branch: master
       tags: true
+env:
+  - WORKER=1 MAX_WORKERS=10
+  - WORKER=2 MAX_WORKERS=10
+  - WORKER=3 MAX_WORKERS=10
+  - WORKER=4 MAX_WORKERS=10
+  - WORKER=5 MAX_WORKERS=10
+  - WORKER=6 MAX_WORKERS=10
+  - WORKER=7 MAX_WORKERS=10
+  - WORKER=8 MAX_WORKERS=10
+  - WORKER=9 MAX_WORKERS=10
+  - WORKER=10 MAX_WORKERS=10
