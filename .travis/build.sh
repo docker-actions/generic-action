@@ -17,14 +17,14 @@ for c in $(< commands.txt); do
     arr_c=(${c//:/ })
     arr_v=(${arr_c//=/ })
     arr_p=(${arr_c[1]//;/ })
-    echo -e "#!/usr/bin/env bash\nset -Eeuo pipefail\nexec ${arr_v} \"\$@\"" > entrypoint.sh
+    echo -e "#!/usr/bin/env bash\nset -Eeuo pipefail\nexec ${arr_v} \"\$@\"" > ${arr_v}.entrypoint.sh
     if [ "x${tag}" = "xlatest" ]; then
       image_tag=${tag}
     else
       image_tag=${arr_v[1]}-${tag}
     fi
     echo Building ${arr_v}:${image_tag}
-    docker build --build-arg REQUIRED_PACKAGES="$(echo ${arr_p[@]})" -t ${docker_org}/${arr_v}:${image_tag} . >${arr_v}.log 2>&1 &
+    docker build --build-arg REQUIRED_PACKAGES="$(echo ${arr_p[@]})" --build-arg COMMAND=${arr_v} -t ${docker_org}/${arr_v}:${image_tag} . >${arr_v}.log 2>&1 &
     build_pids[${arr_v}]=$!
   else
     echo "Index: ${i} does not belong to worker ${WORKER}"

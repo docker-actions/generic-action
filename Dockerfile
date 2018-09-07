@@ -1,6 +1,7 @@
 FROM ubuntu:bionic as build
 
 ARG REQUIRED_PACKAGES=""
+ARG COMMAND=""
 
 ENV ROOTFS /build/rootfs
 ENV BUILD_DEBS /build/debs
@@ -36,7 +37,7 @@ RUN mv ${ROOTFS}/sbin ${ROOTFS}/sbin.orig \
            chmod +x ${ROOTFS}/sbin/$(basename $b); \
          done
 
-COPY entrypoint.sh ${ROOTFS}/usr/local/bin/entrypoint.sh
+COPY ${COMMAND}.entrypoint.sh ${ROOTFS}/usr/local/bin/entrypoint.sh
 RUN chmod +x ${ROOTFS}/usr/local/bin/entrypoint.sh
 
 FROM actions/bash:4.4.18-7
