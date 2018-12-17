@@ -11,19 +11,21 @@ from_i=$(($(($WORKER-1))*$MAX_WORKERS))
 to_i=$(($WORKER*$MAX_WORKERS))
 i=0
 echo "From: ${from_i}; to: ${to_i}"
+OLDIFS=$IFS
+IFS=$'\n'
 for c in $(< commands.txt); do
   i=$(($i+1))
   if [ $i -gt $from_i -a $i -le $to_i ]; then
-    arr_c=(${c//:/ })
-    arr_v=(${arr_c//=/ })
+    # IMAGE_NAME, IMAGE_TAG, REQUIRED_PACKAGES
+    eval $c
     if [ "x${tag}" = "xlatest" ]; then
       image_tag=${tag}
     else
-      image_tag=${arr_v[1]}-${tag}
+      image_tag=${IMAGE_TAG}-${tag}
     fi
-    echo Building ${arr_v}:${image_tag}
-    docker push ${docker_org}/${arr_v}:${image_tag} >${arr_v}.log 2>&1 &
-    build_pids[${arr_v}]=$!
+    echo Building ${IMAGE_NAME}:${image_tag}
+    docker push ${docker_org}/${IMAGE_NAME}:${image_tag} >${IMAGE_NAME}.log 2>&1 &
+    build_pids[${IMAGE_NAME}]=$!
   else
     echo "Index: ${i} does not belong to worker ${WORKER}"
   fi
@@ -34,6 +36,7 @@ for c in $(< commands.txt); do
     echo "New from: ${from_i}; to: ${to_i}"
   fi
 done
+IFS=$OLDIFS
 
 for n in "${!build_pids[@]}"; do
   echo Waiting for $n to build
