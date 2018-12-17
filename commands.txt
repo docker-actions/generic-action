@@ -1,65 +1,65 @@
-git=2.17.1:git;less;ncurses-base
-ssh=7.6:openssh-client
-ssh-keygen=7.6:openssh-client
-ssh-keyscan=7.6:openssh-client
-ssh-add=7.6:openssh-client
-ssh-agent=7.6:openssh-client
-ssh-argv0=7.6:openssh-client
-ssh-copy-id=7.6:openssh-client
-slogin=7.6:openssh-client
-scp=7.6:openssh-client
-sftp=7.6:openssh-client
-curl=7.58:curl
-gpg=2.2.4:gpg
-gpg-connect-agent=2.2.4:gpg
-gpg-agent=2.2.4:gpg-agent
-tar=1.29:tar;libacl1
-grep=3.1:grep
-sed=4.4:sed
-gzip=1.6:gzip
-find=4.6.0:findutils
-kill=3.3.12:procps;liblzma5;liblz4-1;libgcrypt20
-ps=3.3.12:procps;liblzma5;liblz4-1;libgcrypt20
-free=3.3.12:procps;liblzma5;liblz4-1;libgcrypt20
-pmap=3.3.12:procps;liblzma5;liblz4-1;libgcrypt20
-skill=3.3.12:procps;liblzma5;liblz4-1;libgcrypt20
-uptime=3.3.12:procps;liblzma5;liblz4-1;libgcrypt20
-vmstat=3.3.12:procps;liblzma5;liblz4-1;libgcrypt20
-watch=3.3.12:procps;liblzma5;liblz4-1;libgcrypt20
-pkill=3.3.12:procps;liblzma5;liblz4-1;libgcrypt20
-snice=3.3.12:procps;liblzma5;liblz4-1;libgcrypt20
-pgrep=3.3.12:procps;liblzma5;liblz4-1;libgcrypt20
-top=3.3.12:procps;liblzma5;liblz4-1;libgcrypt20;ncurses-base
-gawk=4.1.4:gawk;libsigsegv2;libreadline7;libmpfr6
-rsync=3.1.2:rsync
-jq=1.5:jq
-tig=2.3.0:tig;ncurses-base
-psql=10.3:postgresql-client-10=10.3-1;perl-base;libc-bin
-clusterdb=10.3:postgresql-client-10=10.3-1;perl-base;libc-bin
-createdb=10.3:postgresql-client-10=10.3-1;perl-base;libc-bin
-dropdb=10.3:postgresql-client-10=10.3-1;perl-base;libc-bin
-pg_basebackup=10.3:postgresql-client-10=10.3-1;perl-base;libc-bin
-pg_dump=10.3:postgresql-client-10=10.3-1;perl-base;libc-bin
-pg_dumpall=10.3:postgresql-client-10=10.3-1;perl-base;libc-bin
-pg_isready=10.3:postgresql-client-10=10.3-1;perl-base;libc-bin
-pg_receivewal=10.3:postgresql-client-10=10.3-1;perl-base;libc-bin
-pg_recvlogical=10.3:postgresql-client-10=10.3-1;perl-base;libc-bin
-pg_restore=10.3:postgresql-client-10=10.3-1;perl-base;libc-bin
-reindexdb=10.3:postgresql-client-10=10.3-1;perl-base;libc-bin
-vacuumdb=10.3:postgresql-client-10=10.3-1;perl-base;libc-bin
-more=2.31.1:util-linux
-flock=2.31.1:util-linux
-lscpu=2.31.1:util-linux
-lsipc=2.31.1:util-linux
-lsmem=2.31.1:util-linux
-lsns=2.31.1:util-linux
-mcookie=2.31.1:util-linux
-namei=2.31.1:util-linux
-nsenter=2.31.1:util-linux
-prlimit=2.31.1:util-linux
-rev=2.31.1:util-linux
-whereis=2.31.1:util-linux
-getty=2.31.1:util-linux
-less=487:less;ncurses-base
-node=8.10.0:nodejs=8.10.0~dfsg-2ubuntu0.2
-nodejs=8.10.0:nodejs=8.10.0~dfsg-2ubuntu0.2
+export IMAGE_NAME=git;                 export IMAGE_TAG=2.17.1;   export REQUIRED_PACKAGES="git less ncurses-base"
+export IMAGE_NAME=ssh;                 export IMAGE_TAG=7.6;      export REQUIRED_PACKAGES="openssh-client"
+export IMAGE_NAME=ssh-keygen;          export IMAGE_TAG=7.6;      export REQUIRED_PACKAGES="openssh-client"
+export IMAGE_NAME=ssh-keyscan;         export IMAGE_TAG=7.6;      export REQUIRED_PACKAGES="openssh-client"
+export IMAGE_NAME=ssh-add;             export IMAGE_TAG=7.6;      export REQUIRED_PACKAGES="openssh-client"
+export IMAGE_NAME=ssh-agent;           export IMAGE_TAG=7.6;      export REQUIRED_PACKAGES="openssh-client"
+export IMAGE_NAME=ssh-argv0;           export IMAGE_TAG=7.6;      export REQUIRED_PACKAGES="openssh-client"
+export IMAGE_NAME=ssh-copy-id;         export IMAGE_TAG=7.6;      export REQUIRED_PACKAGES="openssh-client"
+export IMAGE_NAME=slogin;              export IMAGE_TAG=7.6;      export REQUIRED_PACKAGES="openssh-client"
+export IMAGE_NAME=scp;                 export IMAGE_TAG=7.6;      export REQUIRED_PACKAGES="openssh-client"
+export IMAGE_NAME=sftp;                export IMAGE_TAG=7.6;      export REQUIRED_PACKAGES="openssh-client"
+export IMAGE_NAME=curl;                export IMAGE_TAG=7.58;     export REQUIRED_PACKAGES="curl"
+export IMAGE_NAME=gpg;                 export IMAGE_TAG=2.2.4;    export REQUIRED_PACKAGES="gpg"
+export IMAGE_NAME=gpg-connect-agent;   export IMAGE_TAG=2.2.4;    export REQUIRED_PACKAGES="gpg"
+export IMAGE_NAME=gpg-agent;           export IMAGE_TAG=2.2.4;    export REQUIRED_PACKAGES="gpg-agent"
+export IMAGE_NAME=tar;                 export IMAGE_TAG=1.29;     export REQUIRED_PACKAGES="tar libacl1"
+export IMAGE_NAME=grep;                export IMAGE_TAG=3.1;      export REQUIRED_PACKAGES="grep"
+export IMAGE_NAME=sed;                 export IMAGE_TAG=4.4;      export REQUIRED_PACKAGES="sed"
+export IMAGE_NAME=gzip;                export IMAGE_TAG=1.6;      export REQUIRED_PACKAGES="gzip"
+export IMAGE_NAME=find;                export IMAGE_TAG=4.6.0;    export REQUIRED_PACKAGES="findutils"
+export IMAGE_NAME=kill;                export IMAGE_TAG=3.3.12;   export REQUIRED_PACKAGES="procps liblzma5 liblz4-1 libgcrypt20"
+export IMAGE_NAME=ps;                  export IMAGE_TAG=3.3.12;   export REQUIRED_PACKAGES="procps liblzma5 liblz4-1 libgcrypt20"
+export IMAGE_NAME=free;                export IMAGE_TAG=3.3.12;   export REQUIRED_PACKAGES="procps liblzma5 liblz4-1 libgcrypt20"
+export IMAGE_NAME=pmap;                export IMAGE_TAG=3.3.12;   export REQUIRED_PACKAGES="procps liblzma5 liblz4-1 libgcrypt20"
+export IMAGE_NAME=skill;               export IMAGE_TAG=3.3.12;   export REQUIRED_PACKAGES="procps liblzma5 liblz4-1 libgcrypt20"
+export IMAGE_NAME=uptime;              export IMAGE_TAG=3.3.12;   export REQUIRED_PACKAGES="procps liblzma5 liblz4-1 libgcrypt20"
+export IMAGE_NAME=vmstat;              export IMAGE_TAG=3.3.12;   export REQUIRED_PACKAGES="procps liblzma5 liblz4-1 libgcrypt20"
+export IMAGE_NAME=watch;               export IMAGE_TAG=3.3.12;   export REQUIRED_PACKAGES="procps liblzma5 liblz4-1 libgcrypt20"
+export IMAGE_NAME=pkill;               export IMAGE_TAG=3.3.12;   export REQUIRED_PACKAGES="procps liblzma5 liblz4-1 libgcrypt20"
+export IMAGE_NAME=snice;               export IMAGE_TAG=3.3.12;   export REQUIRED_PACKAGES="procps liblzma5 liblz4-1 libgcrypt20"
+export IMAGE_NAME=pgrep;               export IMAGE_TAG=3.3.12;   export REQUIRED_PACKAGES="procps liblzma5 liblz4-1 libgcrypt20"
+export IMAGE_NAME=top;                 export IMAGE_TAG=3.3.12;   export REQUIRED_PACKAGES="procps liblzma5 liblz4-1 libgcrypt20 ncurses-base"
+export IMAGE_NAME=gawk;                export IMAGE_TAG=4.1.4;    export REQUIRED_PACKAGES="gawk libsigsegv2 libreadline7 libmpfr6"
+export IMAGE_NAME=rsync;               export IMAGE_TAG=3.1.2;    export REQUIRED_PACKAGES="rsync"
+export IMAGE_NAME=jq;                  export IMAGE_TAG=1.5;      export REQUIRED_PACKAGES="jq"
+export IMAGE_NAME=tig;                 export IMAGE_TAG=2.3.0;    export REQUIRED_PACKAGES="tig ncurses-base"
+export IMAGE_NAME=psql;                export IMAGE_TAG=10.3;     export REQUIRED_PACKAGES="postgresql-client-10=10.3-1 perl-base libc-bin"
+export IMAGE_NAME=clusterdb;           export IMAGE_TAG=10.3;     export REQUIRED_PACKAGES="postgresql-client-10=10.3-1 perl-base libc-bin"
+export IMAGE_NAME=createdb;            export IMAGE_TAG=10.3;     export REQUIRED_PACKAGES="postgresql-client-10=10.3-1 perl-base libc-bin"
+export IMAGE_NAME=dropdb;              export IMAGE_TAG=10.3;     export REQUIRED_PACKAGES="postgresql-client-10=10.3-1 perl-base libc-bin"
+export IMAGE_NAME=pg_basebackup;       export IMAGE_TAG=10.3;     export REQUIRED_PACKAGES="postgresql-client-10=10.3-1 perl-base libc-bin"
+export IMAGE_NAME=pg_dump;             export IMAGE_TAG=10.3;     export REQUIRED_PACKAGES="postgresql-client-10=10.3-1 perl-base libc-bin"
+export IMAGE_NAME=pg_dumpall;          export IMAGE_TAG=10.3;     export REQUIRED_PACKAGES="postgresql-client-10=10.3-1 perl-base libc-bin"
+export IMAGE_NAME=pg_isready;          export IMAGE_TAG=10.3;     export REQUIRED_PACKAGES="postgresql-client-10=10.3-1 perl-base libc-bin"
+export IMAGE_NAME=pg_receivewal;       export IMAGE_TAG=10.3;     export REQUIRED_PACKAGES="postgresql-client-10=10.3-1 perl-base libc-bin"
+export IMAGE_NAME=pg_recvlogical;      export IMAGE_TAG=10.3;     export REQUIRED_PACKAGES="postgresql-client-10=10.3-1 perl-base libc-bin"
+export IMAGE_NAME=pg_restore;          export IMAGE_TAG=10.3;     export REQUIRED_PACKAGES="postgresql-client-10=10.3-1 perl-base libc-bin"
+export IMAGE_NAME=reindexdb;           export IMAGE_TAG=10.3;     export REQUIRED_PACKAGES="postgresql-client-10=10.3-1 perl-base libc-bin"
+export IMAGE_NAME=vacuumdb;            export IMAGE_TAG=10.3;     export REQUIRED_PACKAGES="postgresql-client-10=10.3-1 perl-base libc-bin"
+export IMAGE_NAME=more;                export IMAGE_TAG=2.31.1;   export REQUIRED_PACKAGES="util-linux"
+export IMAGE_NAME=flock;               export IMAGE_TAG=2.31.1;   export REQUIRED_PACKAGES="util-linux"
+export IMAGE_NAME=lscpu;               export IMAGE_TAG=2.31.1;   export REQUIRED_PACKAGES="util-linux"
+export IMAGE_NAME=lsipc;               export IMAGE_TAG=2.31.1;   export REQUIRED_PACKAGES="util-linux"
+export IMAGE_NAME=lsmem;               export IMAGE_TAG=2.31.1;   export REQUIRED_PACKAGES="util-linux"
+export IMAGE_NAME=lsns;                export IMAGE_TAG=2.31.1;   export REQUIRED_PACKAGES="util-linux"
+export IMAGE_NAME=mcookie;             export IMAGE_TAG=2.31.1;   export REQUIRED_PACKAGES="util-linux"
+export IMAGE_NAME=namei;               export IMAGE_TAG=2.31.1;   export REQUIRED_PACKAGES="util-linux"
+export IMAGE_NAME=nsenter;             export IMAGE_TAG=2.31.1;   export REQUIRED_PACKAGES="util-linux"
+export IMAGE_NAME=prlimit;             export IMAGE_TAG=2.31.1;   export REQUIRED_PACKAGES="util-linux"
+export IMAGE_NAME=rev;                 export IMAGE_TAG=2.31.1;   export REQUIRED_PACKAGES="util-linux"
+export IMAGE_NAME=whereis;             export IMAGE_TAG=2.31.1;   export REQUIRED_PACKAGES="util-linux"
+export IMAGE_NAME=getty;               export IMAGE_TAG=2.31.1;   export REQUIRED_PACKAGES="util-linux"
+export IMAGE_NAME=less;                export IMAGE_TAG=487;      export REQUIRED_PACKAGES="less ncurses-base"
+export IMAGE_NAME=node;                export IMAGE_TAG=8.10.0;   export REQUIRED_PACKAGES="nodejs=8.10.0~dfsg-2ubuntu0.2"
+export IMAGE_NAME=nodejs;              export IMAGE_TAG=8.10.0;   export REQUIRED_PACKAGES="nodejs=8.10.0~dfsg-2ubuntu0.2"
