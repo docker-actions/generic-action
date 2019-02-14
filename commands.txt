@@ -63,3 +63,4 @@ export IMAGE_NAME=getty;               export IMAGE_TAG=2.31.1;   export REQUIRE
 export IMAGE_NAME=less;                export IMAGE_TAG=487;      export REQUIRED_PACKAGES="less ncurses-base"
 export IMAGE_NAME=node;                export IMAGE_TAG=8.10.0;   export REQUIRED_PACKAGES="nodejs=8.10.0~dfsg-2ubuntu0.2"
 export IMAGE_NAME=nodejs;              export IMAGE_TAG=8.10.0;   export REQUIRED_PACKAGES="nodejs=8.10.0~dfsg-2ubuntu0.2"
+export IMAGE_NAME=cargo;               export IMAGE_TAG=0.31.0;   export REQUIRED_PACKAGES="cargo=0.31.0-3ubuntu1~18.04.4"
