@@ -65,3 +65,4 @@ export IMAGE_NAME=node;                export IMAGE_TAG=8.10.0;   export REQUIRE
 export IMAGE_NAME=nodejs;              export IMAGE_TAG=8.10.0;   export REQUIRED_PACKAGES="nodejs=8.10.0~dfsg-2ubuntu0.2"
 export IMAGE_NAME=cargo;               export IMAGE_TAG=0.32.0;   export REQUIRED_PACKAGES="cargo=0.32.0-1* openssh-client"
 export IMAGE_NAME=socat;               export IMAGE_TAG=1.7.3.2;  export REQUIRED_PACKAGES="socat=1.7.3.2-2ubuntu2"
+export IMAGE_NAME=rar;                 export IMAGE_TAG=5.5.0;    export REQUIRED_PACKAGES="rar=2:5.5.0-1"
