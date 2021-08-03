@@ -50,7 +50,7 @@ RUN set -Eeuo pipefail; \
 COPY ${IMAGE_NAME}.entrypoint.sh ${ROOTFS}/usr/local/bin/entrypoint.sh
 RUN chmod +x ${ROOTFS}/usr/local/bin/entrypoint.sh
 
-FROM actions/bash:5.0-1
+FROM actions/bash:5.0-2
 LABEL maintainer = "ilja+docker@bobkevic.com"
 
 ARG ROOTFS

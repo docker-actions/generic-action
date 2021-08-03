@@ -24,7 +24,7 @@ for c in $(< commands.txt); do
       image_tag=${IMAGE_TAG}-${tag}
     fi
     echo Building ${IMAGE_NAME}:${image_tag}
-    docker push ${docker_org}/${IMAGE_NAME}:${image_tag} >${IMAGE_NAME}.log 2>&1 &
+    docker buildx build --push --tag ${docker_org}/${IMAGE_NAME}:${image_tag} --platform linux/amd64,linux/arm64 . >${IMAGE_NAME}.log 2>&1 &
     build_pids[${IMAGE_NAME}]=$!
   else
     echo "Index: ${i} does not belong to worker ${WORKER}"

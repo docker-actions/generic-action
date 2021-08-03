@@ -1,11 +1,19 @@
 language: minimal
+dist: focal
 sudo: required
 services:
   - docker
+before_install:
+  - mkdir -vp ~/.docker/cli-plugins/
+  - curl --silent -L "https://github.com/docker/buildx/releases/download/v0.6.1/buildx-v0.6.1.linux-amd64" > ~/.docker/cli-plugins/docker-buildx
+  - chmod a+x ~/.docker/cli-plugins/docker-buildx
+  - docker run --privileged --rm tonistiigi/binfmt --install arm64
 before_script:
   - tag="${TRAVIS_TAG:-latest}"
   - image_name="$(echo "${TRAVIS_REPO_SLUG}" | cut -d '/' -f 2)"
   - docker_org="actions"
+  - docker buildx create --use
+  - echo "FROM scratch" | docker buildx build -
 script: .travis/build.sh $docker_org $tag
 before_deploy:
   - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
