@@ -34,7 +34,7 @@ RUN set -Eeuo pipefail; \
     else \
       for pkg in ${BUILD_DEBS}/*.deb; do \
         echo Unpacking $pkg; \
-        dpkg-deb -X $pkg ${ROOTFS}; \
+        dpkg-deb -x $pkg ${ROOTFS}; \
       done; \
     fi
 
