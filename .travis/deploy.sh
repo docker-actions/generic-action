@@ -18,13 +18,14 @@ for c in $(< commands.txt); do
   if [ $i -gt $from_i -a $i -le $to_i ]; then
     # IMAGE_NAME, IMAGE_TAG, REQUIRED_PACKAGES
     eval $c
+    echo -e "#!/usr/bin/env bash\nset -Eeuo pipefail\nexec ${IMAGE_NAME} \"\$@\"" > ${IMAGE_NAME}.entrypoint.sh
     if [ "x${tag}" = "xlatest" ]; then
       image_tag=${tag}
     else
       image_tag=${IMAGE_TAG}-${tag}
     fi
     echo Building ${IMAGE_NAME}:${image_tag}
-    docker buildx build --push --tag ${docker_org}/${IMAGE_NAME}:${image_tag} --platform linux/amd64,linux/arm64 . >${IMAGE_NAME}.log 2>&1 &
+    docker buildx build --push --build-arg REQUIRED_PACKAGES --build-arg IMAGE_NAME --tag ${docker_org}/${IMAGE_NAME}:${image_tag} --platform linux/amd64,linux/arm64 . >${IMAGE_NAME}.log 2>&1 &
     build_pids[${IMAGE_NAME}]=$!
   else
     echo "Index: ${i} does not belong to worker ${WORKER}"
