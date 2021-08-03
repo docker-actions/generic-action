@@ -30,7 +30,7 @@ export IMAGE_NAME=pkill;               export IMAGE_TAG=3.3.16;   export REQUIRE
 export IMAGE_NAME=snice;               export IMAGE_TAG=3.3.16;   export REQUIRED_PACKAGES="procps liblzma5 liblz4-1 libgcrypt20"
 export IMAGE_NAME=pgrep;               export IMAGE_TAG=3.3.16;   export REQUIRED_PACKAGES="procps liblzma5 liblz4-1 libgcrypt20"
 export IMAGE_NAME=top;                 export IMAGE_TAG=3.3.16;   export REQUIRED_PACKAGES="procps liblzma5 liblz4-1 libgcrypt20 ncurses-base"
-export IMAGE_NAME=gawk;                export IMAGE_TAG=5.0.1;    export REQUIRED_PACKAGES="gawk libsigsegv2 libreadline7 libmpfr6"
+export IMAGE_NAME=gawk;                export IMAGE_TAG=5.0.1;    export REQUIRED_PACKAGES="gawk libsigsegv2 libreadline8 libmpfr6"
 export IMAGE_NAME=rsync;               export IMAGE_TAG=3.1.3;    export REQUIRED_PACKAGES="rsync"
 export IMAGE_NAME=jq;                  export IMAGE_TAG=1.6;      export REQUIRED_PACKAGES="jq"
 export IMAGE_NAME=tig;                 export IMAGE_TAG=2.4.1;    export REQUIRED_PACKAGES="tig ncurses-base"
