@@ -66,4 +66,4 @@ export IMAGE_NAME=nodejs;              export IMAGE_TAG=10.19.0;  export REQUIRE
 export IMAGE_NAME=cargo;               export IMAGE_TAG=0.47.0;   export REQUIRED_PACKAGES="cargo=0.47.0-1* openssh-client"
 export IMAGE_NAME=socat;               export IMAGE_TAG=1.7.3.3;  export REQUIRED_PACKAGES="socat=1.7.3.3-2"
 export IMAGE_NAME=rar;                 export IMAGE_TAG=5.5.0;    export REQUIRED_PACKAGES="rar=2:5.5.0-1*"
-export IMAGE_NAME=jsonnet;             export IMAGE_TAG=5.5.0;    export REQUIRED_PACKAGES="rar=2:5.5.0-1*"
+export IMAGE_NAME=jsonnet;             export IMAGE_TAG=0.15.0;   export REQUIRED_PACKAGES="jsonnet=0.15.0*"
