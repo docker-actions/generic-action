@@ -1,6 +1,6 @@
 ARG ROOTFS=/build/rootfs
 
-FROM ubuntu:bionic as build
+FROM ubuntu:focal as build
 
 ARG REQUIRED_PACKAGES=""
 ARG IMAGE_NAME=""
@@ -50,7 +50,7 @@ RUN set -Eeuo pipefail; \
 COPY ${IMAGE_NAME}.entrypoint.sh ${ROOTFS}/usr/local/bin/entrypoint.sh
 RUN chmod +x ${ROOTFS}/usr/local/bin/entrypoint.sh
 
-FROM actions/bash:4.4.18-8
+FROM actions/bash:5.0-1
 LABEL maintainer = "ilja+docker@bobkevic.com"
 
 ARG ROOTFS
