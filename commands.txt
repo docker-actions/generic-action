@@ -68,3 +68,4 @@ export IMAGE_NAME=socat;               export IMAGE_TAG=1.7.3.3;  export REQUIRE
 export IMAGE_NAME=unrar;               export IMAGE_TAG=0.0.1;    export REQUIRED_PACKAGES="unrar-free=1:0.0.1*"
 export IMAGE_NAME=jsonnet;             export IMAGE_TAG=0.15.0;   export REQUIRED_PACKAGES="jsonnet=0.15.0*"
 export IMAGE_NAME=sshd;                export IMAGE_TAG=8.2;      export REQUIRED_PACKAGES="openssh-server liblzma5 liblz4-1 libgcrypt20"
+export IMAGE_NAME=openssl;             export IMAGE_TAG=1.1.1;    export REQUIRED_PACKAGES="openssl"
